@@ -1,4 +1,5 @@
-import { Column, PrimaryGeneratedColumn, Entity } from 'typeorm';
+import { Column, PrimaryGeneratedColumn, Entity, ManyToOne } from 'typeorm';
+import { Playlist } from 'src/playlists/playlist.entity.js';
 
 @Entity('songs')
 export class Song {
@@ -16,4 +17,7 @@ export class Song {
 
   @Column('text')
   lyrics: string;
+
+  @ManyToOne(() => Playlist, (playlist) => playlist.songs)
+  playlist: Playlist;
 }

@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SongsModule } from './songs/songs.module';
 import { LoggerMiddleware } from './common/middlewares/logger.middleware.js';
+import { PlayListModule } from './playlists/playlists.module';
 
 @Module({
-  imports: [SongsModule],
+  imports: [SongsModule, PlayListModule],
   controllers: [AppController],
   providers: [AppService],
 })
