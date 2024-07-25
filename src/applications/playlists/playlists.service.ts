@@ -1,10 +1,10 @@
 import { InjectRepository } from '@nestjs/typeorm';
 import { Playlist } from './playlist.entity';
-import { Song } from 'src/songs/song.entity';
 import { Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import { User } from 'src/users/user.entity';
 import { CreatePlayListDto } from './dto/create-playlist.dto';
+import { Song } from '../songs/song.entity';
+import { User } from '../users/user.entity';
 
 @Injectable()
 export class PlayListsService {

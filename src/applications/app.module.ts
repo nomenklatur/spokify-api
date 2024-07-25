@@ -1,11 +1,11 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SongsModule } from './songs/songs.module';
-import { LoggerMiddleware } from './common/middlewares/logger.middleware';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { SongsModule } from './songs/songs.module';
 import { PlayListModule } from './playlists/playlists.module';
-import { DB_CONFIG } from './config/database';
+import { DB_CONFIG } from 'src/config/database';
+import { LoggerMiddleware } from 'src/common/middlewares/logger.middleware';
 
 @Module({
   imports: [TypeOrmModule.forRoot(DB_CONFIG), SongsModule, PlayListModule],

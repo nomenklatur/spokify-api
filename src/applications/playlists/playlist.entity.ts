@@ -5,8 +5,8 @@ import {
   OneToMany,
   ManyToOne,
 } from 'typeorm';
-import { User } from 'src/users/user.entity';
-import { Song } from 'src/songs/song.entity';
+import { User } from '../users/user.entity';
+import { Song } from '../songs/song.entity';
 @Entity('playlists')
 export class Playlist {
   @PrimaryGeneratedColumn()
