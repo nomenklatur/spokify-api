@@ -9,8 +9,8 @@ import {
   HttpStatus,
   Param,
 } from '@nestjs/common';
-import { SongsService } from './songs.service.js';
-import { CreateSongsDTO } from './dto/create-songs-dto.js';
+import { SongsService } from './songs.service';
+import { CreateSongsDTO } from './dto/create-songs-dto';
 
 @Controller('songs')
 export class SongsController {
